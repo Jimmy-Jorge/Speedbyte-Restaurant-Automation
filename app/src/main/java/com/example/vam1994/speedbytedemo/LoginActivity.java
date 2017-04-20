@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         Log.d(TAG, "MainScreen");
 
         if(!passwordChecked()){
-            onLoginFailed();   
+            onLoginFailed();
             return;
         }
 
