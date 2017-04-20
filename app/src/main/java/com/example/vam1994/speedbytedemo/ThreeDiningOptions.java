@@ -6,11 +6,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * The type Three dining options.
+ */
 public class ThreeDiningOptions extends AppCompatActivity {
 
+    /**
+     * The Dine in.
+     */
     static Button dineIn;
 
-
+    /**
+     * Give user 3 options to pick from
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +30,9 @@ public class ThreeDiningOptions extends AppCompatActivity {
 
     }
 
+    /**
+     * Click dine in.
+     */
     public void clickDineIn(){
         dineIn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -5,8 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * The type Waiter.
+ */
 public class Waiter extends AppCompatActivity {
 
+    /**
+     * Instantiate waiter activity with table details
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

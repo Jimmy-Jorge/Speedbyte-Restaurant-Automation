@@ -8,11 +8,24 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+/**
+ * The type Menu.
+ */
 public class Menu extends AppCompatActivity {
 
+    /**
+     * The Place order.
+     */
     static Button placeOrder;
+    /**
+     * The List view menu.
+     */
     static ListView listViewMenu;
 
+    /**
+     * Displays menu and allows to place order
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +45,9 @@ public class Menu extends AppCompatActivity {
     }
 
 
+    /**
+     * Click place order.
+     */
     public void clickPlaceOrder(){
         placeOrder.setOnClickListener(new View.OnClickListener() {
             @Override

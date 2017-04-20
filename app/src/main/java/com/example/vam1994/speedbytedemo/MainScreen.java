@@ -9,14 +9,36 @@ import android.widget.Button;
 
 //import com.example.vam1994.speedbytedemo.R;
 
+/**
+ * The type Main screen.
+ */
 public class MainScreen extends AppCompatActivity {
 
+    /**
+     * The Customer.
+     */
     static Button customer;
+    /**
+     * The Chef.
+     */
     static Button chef;
+    /**
+     * The Waiter.
+     */
     static Button waiter;
+    /**
+     * The Manager.
+     */
     static Button manager;
+    /**
+     * The Busboy.
+     */
     static Button busboy;
 
+    /**
+     * Instantiates main screen activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +58,11 @@ public class MainScreen extends AppCompatActivity {
 
     }
 
-    private void clickBusboy() {
+
+    /**
+     * CLick busboy.
+     */
+    public void clickBusboy() {
         busboy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +72,9 @@ public class MainScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click customer.
+     */
     public void clickCustomer(){
         customer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +86,9 @@ public class MainScreen extends AppCompatActivity {
     }
 
 
+    /**
+     * Click chef.
+     */
     public void clickChef(){
         chef.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +99,9 @@ public class MainScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click waiter.
+     */
     public void clickWaiter(){
         waiter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +112,9 @@ public class MainScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click manager.
+     */
     public void clickManager(){
         manager.setOnClickListener(new View.OnClickListener() {
             @Override

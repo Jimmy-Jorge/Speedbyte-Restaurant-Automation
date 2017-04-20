@@ -15,13 +15,29 @@ import com.github.mikephil.charting.formatter.LargeValueFormatter;
 
 import java.util.ArrayList;
 
+/**
+ * The type Manager inventory.
+ */
 public class ManagerInventory extends AppCompatActivity {
 
     private BarChart chart;
+    /**
+     * The Bar width.
+     */
     float barWidth = 0.3f;
+    /**
+     * The Bar space.
+     */
     float barSpace = 0f;
+    /**
+     * The Group space.
+     */
     float groupSpace = 0.8f;
 
+    /**
+     * Creates graph for restaurant inventory
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

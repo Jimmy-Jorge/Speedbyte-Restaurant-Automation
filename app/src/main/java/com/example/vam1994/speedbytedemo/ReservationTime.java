@@ -8,11 +8,21 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * The type Reservation time.
+ */
 public class ReservationTime extends AppCompatActivity {
 
 
+    /**
+     * The Listview.
+     */
     static ListView lv;
 
+    /**
+     * Allow user to reserve certain time
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

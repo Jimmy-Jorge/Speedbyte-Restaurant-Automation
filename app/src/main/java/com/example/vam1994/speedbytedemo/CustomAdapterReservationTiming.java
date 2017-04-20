@@ -13,10 +13,23 @@ import android.widget.TextView;
  */
 public class CustomAdapterReservationTiming extends ArrayAdapter<String>{
 
+    /**
+     * Instantiates a new Custom adapter reservation timing.
+     *
+     * @param context  the context
+     * @param resource the resource
+     */
     public CustomAdapterReservationTiming(Context context, String[] resource) {
         super(context, R.layout.reservationtimerows, resource);
     }
 
+    /**
+     * Set a custom view
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         LayoutInflater LI = LayoutInflater.from(getContext());

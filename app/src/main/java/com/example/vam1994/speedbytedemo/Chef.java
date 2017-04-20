@@ -5,8 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * The type Chef.
+ */
 public class Chef extends AppCompatActivity {
 
+    /**
+     * Create Chef Activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

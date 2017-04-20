@@ -18,13 +18,23 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+/**
+ * The type Rating page.
+ */
 public class RatingPage extends AppCompatActivity {
 
     private ListView listView;
     private ArrayAdapter<FoodItem> adapter;
     private ArrayList<FoodItem> arrayList;
+    /**
+     * The Context.
+     */
     final Context context = this;
 
+    /**
+     * ALlow user to rate item upon eating
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +104,9 @@ public class RatingPage extends AppCompatActivity {
         };
     }
 
+    /**
+     * Add dummy data to list
+     */
     private void setListData() {
         arrayList = new ArrayList<>();
         arrayList.add(new FoodItem(0, "Veggie Pizza"));

@@ -18,18 +18,41 @@ import butterknife.ButterKnife;
 /**
  * Created by tillu on 4/18/2017.
  */
-
 public class SignUpActivity extends AppCompatActivity{
 
     private static final String TAG = "Signup Activity";
 
+    /**
+     * The Name text.
+     */
     @Bind(R.id.input_name) EditText nameText;
+    /**
+     * The Address text.
+     */
     @Bind(R.id.input_address) EditText addressText;
+    /**
+     * The Email text.
+     */
     @Bind(R.id.input_email) EditText emailText;
+    /**
+     * The Phone text.
+     */
     @Bind(R.id.input_phone) EditText phoneText;
+    /**
+     * The Password text.
+     */
     @Bind(R.id.input_password) EditText passwordText;
+    /**
+     * The Re enter password text.
+     */
     @Bind(R.id.input_reEnterPassword) EditText reEnterPasswordText;
+    /**
+     * The Signup button.
+     */
     @Bind(R.id.btn_signup) Button signupButton;
+    /**
+     * The Login link.
+     */
     @Bind(R.id.link_login) TextView loginLink;
 
     @Override
@@ -56,6 +79,9 @@ public class SignUpActivity extends AppCompatActivity{
         });
     }
 
+    /**
+     * Sign up.
+     */
     public void signUp(){
         Log.d(TAG, "Signup");
 
@@ -85,7 +111,7 @@ public class SignUpActivity extends AppCompatActivity{
                 new Runnable() {
                     @Override
                     public void run() {
-                        onSignUpSucess();
+                        onSignUpSuccess();
                         progressDialog.dismiss();
                     }
                 }, 3000
@@ -93,17 +119,28 @@ public class SignUpActivity extends AppCompatActivity{
 
     }
 
-    public void onSignUpSucess(){
+    /**
+     * If sign up success.
+     */
+    public void onSignUpSuccess(){
         signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
         finish();
     }
 
+    /**
+     * If sign up failed.
+     */
     public void onSignUpFailed(){
         Toast.makeText(getBaseContext(), "MainScreen Failed", Toast.LENGTH_LONG).show();
         signupButton.setEnabled(true);
     }
 
+    /**
+     * Checked boolean.
+     *
+     * @return the boolean
+     */
     public boolean checked(){
         boolean isValid = true;
 

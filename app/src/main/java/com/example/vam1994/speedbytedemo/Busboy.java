@@ -5,10 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * The type Busboy.
+ */
 public class Busboy extends AppCompatActivity {
 
+    /**
+     * A listview.
+     */
     ListView lv;
 
+    /**
+     * Aloow busboy to see which tables are dirty or clean
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

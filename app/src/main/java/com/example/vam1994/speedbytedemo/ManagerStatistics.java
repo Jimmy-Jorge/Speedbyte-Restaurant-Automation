@@ -6,12 +6,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * The type Manager statistics.
+ */
 public class ManagerStatistics extends AppCompatActivity {
 
+    /**
+     * The Inventory.
+     */
     static Button inventory;
+    /**
+     * The Traffic.
+     */
     static Button traffic;
+    /**
+     * The Profits.
+     */
     static Button profits;
 
+    /**
+     * Allow manager to view stats
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +43,9 @@ public class ManagerStatistics extends AppCompatActivity {
 
     }
 
+    /**
+     * Click inventory.
+     */
     public void clickInventory(){
         inventory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +56,9 @@ public class ManagerStatistics extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click traffic.
+     */
     public void clickTraffic(){
         traffic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +69,9 @@ public class ManagerStatistics extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click profits.
+     */
     public void clickProfits(){
         profits.setOnClickListener(new View.OnClickListener() {
             @Override

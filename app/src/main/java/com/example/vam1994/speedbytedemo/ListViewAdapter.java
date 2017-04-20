@@ -20,12 +20,24 @@ public class ListViewAdapter extends ArrayAdapter<FoodItem> {
     private AppCompatActivity activity;
     private List<FoodItem> foodItemList;
 
+    /**
+     * Instantiates a new List view adapter.
+     *
+     * @param context  the context
+     * @param resource the resource
+     * @param objects  the objects
+     */
     public ListViewAdapter(AppCompatActivity context, int resource, List<FoodItem> objects) {
         super(context, resource, objects);
         this.activity = context;
         this.foodItemList = objects;
     }
 
+    /**
+     * Overrides the getItem of FoodItem class
+     * @param position
+     * @return
+     */
     @Override
     public FoodItem getItem(int position) {
         return foodItemList.get(position);
@@ -70,6 +82,11 @@ public class ListViewAdapter extends ArrayAdapter<FoodItem> {
         private RatingBar ratingBar;
         private TextView movieName;
 
+        /**
+         * Instantiates a new View holder.
+         *
+         * @param view the view
+         */
         public ViewHolder(View view) {
             ratingBar = (RatingBar) view.findViewById(R.id.rate_img);
             movieName = (TextView) view.findViewById(R.id.text);

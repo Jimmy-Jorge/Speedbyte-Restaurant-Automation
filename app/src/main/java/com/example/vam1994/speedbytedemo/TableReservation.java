@@ -9,13 +9,26 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * The type Table reservation.
+ */
 public class TableReservation extends AppCompatActivity {
 
 
+    /**
+     * A textview.
+     */
     static TextView tv;
+    /**
+     * A listview.
+     */
     static ListView lv;
 
 
+    /**
+     * Create activity to reserve table
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +54,9 @@ public class TableReservation extends AppCompatActivity {
 
     }
 
+    /**
+     * Click text.
+     */
     public void clickText(){
         tv.setOnClickListener(new View.OnClickListener() {
             @Override

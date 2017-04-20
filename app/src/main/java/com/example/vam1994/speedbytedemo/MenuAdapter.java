@@ -8,8 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+/**
+ * The type Menu adapter.
+ */
 public class MenuAdapter extends ArrayAdapter<String>{
 
+    /**
+     * Instantiates a new Menu adapter.
+     *
+     * @param context  the context
+     * @param resource the resource
+     */
     public MenuAdapter(Context context, String[] resource){
         super(context, R.layout.menuadapterrows, resource);
     }

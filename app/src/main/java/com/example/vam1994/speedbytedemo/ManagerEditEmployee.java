@@ -7,11 +7,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/**
+ * The type Manager edit employee.
+ */
 public class ManagerEditEmployee extends AppCompatActivity {
 
+    /**
+     * The Add.
+     */
     static Button add;
+    /**
+     * The Delete.
+     */
     static Button delete;
 
+    /**
+     * Create activity for manager edit employee
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

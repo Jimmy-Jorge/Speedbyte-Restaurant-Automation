@@ -7,13 +7,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+/**
+ * The type Manager options.
+ */
 public class ManagerOptions extends AppCompatActivity {
 
+    /**
+     * The Ib.
+     */
     static ImageButton ib;
+    /**
+     * The Edit item.
+     */
     static Button editItem;
+    /**
+     * The Edit employee.
+     */
     static Button editEmployee;
+    /**
+     * The Statistics.
+     */
     static Button statistics;
 
+    /**
+     * Create activity for manager options leading to other activities
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +52,9 @@ public class ManagerOptions extends AppCompatActivity {
     }
 
 
+    /**
+     * Click message.
+     */
     public void clickMessage(){
         ib.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +65,9 @@ public class ManagerOptions extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click edit item.
+     */
     public void clickEditItem(){
         editItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +78,9 @@ public class ManagerOptions extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click edit employee.
+     */
     public void clickEditEmployee(){
         editEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +91,9 @@ public class ManagerOptions extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click statistics.
+     */
     public void clickStatistics(){
         statistics.setOnClickListener(new View.OnClickListener() {
             @Override

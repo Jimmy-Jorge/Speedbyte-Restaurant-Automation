@@ -7,11 +7,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/**
+ * The type Manager edit item.
+ */
 public class ManagerEditItem extends AppCompatActivity {
 
+    /**
+     * The Add.
+     */
     static Button add;
+    /**
+     * The Delete.
+     */
     static Button delete;
 
+    /**
+     * Create an activity for manager edit item
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +38,9 @@ public class ManagerEditItem extends AppCompatActivity {
 
     }
 
+    /**
+     * Click add.
+     */
     public void clickAdd(){
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +52,9 @@ public class ManagerEditItem extends AppCompatActivity {
         });
     }
 
+    /**
+     * Click delete.
+     */
     public void clickDelete(){
         delete.setOnClickListener(new View.OnClickListener() {
             @Override

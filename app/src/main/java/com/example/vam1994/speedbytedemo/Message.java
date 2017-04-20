@@ -8,13 +8,29 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+/**
+ * The type Message.
+ */
 public class Message extends AppCompatActivity {
 
 
+    /**
+     * The To spinner.
+     */
     static Spinner toSpinner;
+    /**
+     * The Message spinner.
+     */
     static Spinner messageSpinner;
+    /**
+     * The Send button.
+     */
     static Button send;
 
+    /**
+     * Instantiates message activity screen with drop-down spinners
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
