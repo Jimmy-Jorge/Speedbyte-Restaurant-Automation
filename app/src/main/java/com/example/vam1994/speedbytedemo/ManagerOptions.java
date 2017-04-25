@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 /**
  * The type Manager options.
  */
-public class ManagerOptions extends AppCompatActivity {
+public class ManagerOptions extends NoBackActivity {
 
     /**
      * The Ib.

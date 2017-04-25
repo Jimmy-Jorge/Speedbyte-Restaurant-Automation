@@ -8,7 +8,7 @@ import android.widget.ListView;
 /**
  * The type Busboy.
  */
-public class Busboy extends AppCompatActivity {
+public class Busboy extends NoBackActivity {
 
     /**
      * A listview.

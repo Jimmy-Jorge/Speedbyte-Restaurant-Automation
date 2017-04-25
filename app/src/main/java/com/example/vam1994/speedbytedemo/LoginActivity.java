@@ -195,11 +195,50 @@ public class LoginActivity extends AppCompatActivity {
 
                                 public void onPostExecute(LoginOutput result) {
                                     if (result != null && result.status == 200) {
-                                        Log.d(TAG, "!!!RESULT!!!" + result.result);
-                                        Intent intent = new Intent(LoginActivity.this, MainScreen.class);
-                                        intent.putExtra("username",mailId);
-                                        intent.putExtra("privateKey",result.result);
-                                        startActivity(intent);
+                                        if(mailId.equals("tim@mail.com")){
+                                            Log.d(TAG, "!!!RESULT!!!" + result.result);
+                                            Intent intent = new Intent(LoginActivity.this, Menu.class);
+                                            intent.putExtra("username",mailId);
+                                            intent.putExtra("privateKey",result.result);
+                                            startActivity(intent);
+                                        }
+
+                                        else if(mailId.equals("chef@mail.com")){
+                                            Log.d(TAG, "!!!RESULT!!!" + result.result);
+                                            Intent intent = new Intent(LoginActivity.this, Chef.class);
+                                            intent.putExtra("username",mailId);
+                                            intent.putExtra("privateKey",result.result);
+                                            startActivity(intent);
+                                        }
+
+                                        else if(mailId.equals("manager@mail.com")){
+                                            Log.d(TAG, "!!!RESULT!!!" + result.result);
+                                            Intent intent = new Intent(LoginActivity.this, ManagerOptions.class);
+                                            intent.putExtra("username",mailId);
+                                            intent.putExtra("privateKey",result.result);
+                                            startActivity(intent);
+                                        }
+
+                                        else if(mailId.equals("waiter@mail.com")){
+                                            Log.d(TAG, "!!!RESULT!!!" + result.result);
+                                            Intent intent = new Intent(LoginActivity.this, Waiter.class);
+                                            intent.putExtra("username",mailId);
+                                            intent.putExtra("privateKey",result.result);
+                                            startActivity(intent);
+                                        }
+
+                                        else if(mailId.equals("busboy@mail.com")){
+                                            Log.d(TAG, "!!!RESULT!!!" + result.result);
+                                            Intent intent = new Intent(LoginActivity.this, Busboy.class);
+                                            intent.putExtra("username",mailId);
+                                            intent.putExtra("privateKey",result.result);
+                                            startActivity(intent);
+                                        }
+
+                                        else{
+                                            Log.d(TAG, "Not an acceptable login");
+                                            Toast.makeText(getApplicationContext(), "User not registered with base", Toast.LENGTH_LONG);
+                                        }
                                         // pass result.result as privateKey to the next activity along with username
                                     } else {
                                         Log.d(TAG, "!!!RESULT!!!: Error.");
@@ -230,15 +269,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         moveTaskToBack(true);
-    }
-
-    /**
-     * If login success, go to main screen
-     */
-    public void onLoginSuccess() {
-        loginButton.setEnabled(true);
-        Intent intent = new Intent(LoginActivity.this, MainScreen.class);
-        startActivity(intent);
     }
 
     /**

@@ -8,7 +8,7 @@ import android.widget.ListView;
 /**
  * The type Chef.
  */
-public class Chef extends AppCompatActivity {
+public class Chef extends NoBackActivity {
 
     /**
      * Create Chef Activity

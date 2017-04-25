@@ -8,7 +8,7 @@ import android.widget.ListView;
 /**
  * The type Waiter.
  */
-public class Waiter extends AppCompatActivity {
+public class Waiter extends NoBackActivity {
 
     /**
      * Instantiate waiter activity with table details
