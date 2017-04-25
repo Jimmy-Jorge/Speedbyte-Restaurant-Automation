@@ -35,6 +35,9 @@ public class MainScreen extends AppCompatActivity {
      */
     static Button busboy;
 
+    private static String privateKey;
+    private static String username;
+
     /**
      * Instantiates main screen activity
      * @param savedInstanceState
@@ -43,6 +46,9 @@ public class MainScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
+
+        privateKey = getIntent().getExtras().getString("privateKey").toString();
+        username = getIntent().getExtras().getString("username").toString();
 
         customer = (Button)findViewById(R.id.customerButton);
         chef = (Button)findViewById(R.id.chefButton);

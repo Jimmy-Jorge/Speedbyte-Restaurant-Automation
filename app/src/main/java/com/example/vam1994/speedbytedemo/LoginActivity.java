@@ -6,6 +6,7 @@ package com.example.vam1994.speedbytedemo;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,6 +17,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -25,6 +37,7 @@ import butterknife.ButterKnife;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
+    public static String pass = "", mailId = "";
 
     /**
      * The Email text.
@@ -42,6 +55,11 @@ public class LoginActivity extends AppCompatActivity {
      * The Signup link.
      */
     @Bind(R.id.link_signup) TextView signupLink;
+
+    public static class LoginOutput {
+        int status;
+        String result;
+    }
 
     /**
      * Allow user to login
@@ -74,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
     /**
      * Login.
      */
-    public void login(){
+   /* public void login(){
         Log.d(TAG, "MainScreen");
 
         if(!passwordChecked()){
@@ -104,6 +122,98 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }, 3000
         );
+    }*/
+
+    /**
+     * Login.
+     */
+    public void login() {
+        if (passwordChecked()) {
+            loginButton.setEnabled(false); //find me1 sss
+
+            final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme_Dark_Dialog);//this is cool
+            progressDialog.setIndeterminate(true);
+            progressDialog.setMessage("Authenticating User...");
+            progressDialog.show();
+
+            mailId = emailText.getText().toString();
+            pass = passwordText.getText().toString();
+
+            new android.os.Handler().postDelayed(
+                    new Runnable() {
+                        @Override
+                        public void run() {
+                            Log.d(TAG, "Got here");
+                            new AsyncTask<Void,Void,LoginOutput>() {
+                                public LoginOutput doInBackground(Void... args) {
+                                    HttpURLConnection conn = null;
+                                    LoginOutput output = null;
+                                    try {
+                                        URL url = new URL("http://172.31.168.183:3000/");
+                                        conn = (HttpURLConnection) url.openConnection();
+                                        conn.setRequestProperty("Content-Type","application/json; charset=UTF-8");
+                                        conn.setRequestProperty("Accept","application/json; charset=UTF-8");
+                                        conn.setRequestProperty("keep-alive","true");
+                                        conn.setConnectTimeout(5000);
+                                        conn.setDoInput(true);
+                                        conn.setDoOutput(true);
+                                        conn.setRequestMethod("POST");
+                                        LoginServerRequest req = new LoginServerRequest();
+                                        req.password = pass;
+                                        req.username = mailId;
+                                        Gson gson = new Gson();
+                                        String body = gson.toJson(req);
+                                        Log.d(TAG,"!!!BODY!!! " + body);
+                                        conn.connect();
+                                        OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+                                        wr.write(body);
+                                        wr.flush();
+                                        InputStream is = conn.getInputStream();
+                                        InputStreamReader isr = new InputStreamReader(is);
+                                        BufferedReader reader = new BufferedReader(isr);
+                                        // BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                                        StringBuilder builder = new StringBuilder();
+                                        String str = reader.readLine();
+                                        while (str != null) {
+                                            builder.append(str);
+                                            str = reader.readLine();
+                                        }
+                                        String result = builder.toString();
+                                        // String result = conn.getResponseMessage();
+                                        output = new LoginOutput();
+                                        output.status = conn.getResponseCode();
+                                        output.result = result;
+                                    } catch(MalformedURLException e) {
+                                        Log.d(TAG, "!!!ERROR!!! Malformed URL");
+                                    } catch (IOException e) {
+                                        Log.d(TAG, "!!!ERROR!!! IO Exception");
+                                    } finally {
+                                        if (conn != null) conn.disconnect();
+                                    }
+                                    return output;
+                                }
+
+                                public void onPostExecute(LoginOutput result) {
+                                    if (result != null && result.status == 200) {
+                                        Log.d(TAG, "!!!RESULT!!!" + result.result);
+                                        Intent intent = new Intent(LoginActivity.this, MainScreen.class);
+                                        intent.putExtra("username",mailId);
+                                        intent.putExtra("privateKey",result.result);
+                                        startActivity(intent);
+                                        // pass result.result as privateKey to the next activity along with username
+                                    } else {
+                                        Log.d(TAG, "!!!RESULT!!!: Error.");
+                                        loginButton.setEnabled(true);
+                                    }
+                                }
+                            }.execute();
+                            progressDialog.dismiss();
+                        }
+                    }, 3000
+            );
+        } else {
+            // error message
+        }
     }
 
     @Override
