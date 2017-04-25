@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.vam1994.speedbytedemo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainScreen"/>
-        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".MainScreen" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".Menu" />
         <activity android:name=".MenuAdapter" />
         <activity android:name=".ReservationTime" />
@@ -35,9 +38,8 @@
         <activity android:name=".ManagerTraffic" />
         <activity android:name=".ManagerProfits" />
         <activity android:name=".RatingPage" />
-        <activity android:name=".Busboy"></activity>
+        <activity android:name=".Busboy" />
+        <activity android:name=".Payment"></activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

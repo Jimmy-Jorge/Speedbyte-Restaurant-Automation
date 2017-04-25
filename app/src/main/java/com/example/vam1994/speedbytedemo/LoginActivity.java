@@ -197,7 +197,7 @@ public class LoginActivity extends AppCompatActivity {
                                     if (result != null && result.status == 200) {
                                         if(mailId.equals("tim@mail.com")){
                                             Log.d(TAG, "!!!RESULT!!!" + result.result);
-                                            Intent intent = new Intent(LoginActivity.this, Menu.class);
+                                            Intent intent = new Intent(LoginActivity.this, ThreeDiningOptions.class);
                                             intent.putExtra("username",mailId);
                                             intent.putExtra("privateKey",result.result);
                                             startActivity(intent);

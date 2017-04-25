@@ -64,7 +64,7 @@ public class RatingPage extends AppCompatActivity {
                             public void onClick(DialogInterface arg0, int arg1) {
                                 Toast.makeText(RatingPage.this,
                                         "You have submitted your ratings.",Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(RatingPage.this, MainScreen.class);
+                                Intent intent = new Intent(RatingPage.this, ThreeDiningOptions.class);
                                 startActivity(intent);
                             }
                         });

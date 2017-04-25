@@ -52,7 +52,7 @@ public class Menu extends NoBackActivity {
         placeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Menu.this, RatingPage.class);
+                Intent intent = new Intent(Menu.this, Payment.class);
                 startActivity(intent);
             }
         });
