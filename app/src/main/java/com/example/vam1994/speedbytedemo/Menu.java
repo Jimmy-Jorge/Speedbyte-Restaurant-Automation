@@ -11,7 +11,7 @@ import android.widget.ListView;
 /**
  * The type Menu.
  */
-public class Menu extends NoBackActivity {
+public class Menu extends AppCompatActivity {
 
     /**
      * The Place order.
