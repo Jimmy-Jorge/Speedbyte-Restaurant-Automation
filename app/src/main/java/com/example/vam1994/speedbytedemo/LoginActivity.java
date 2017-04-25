@@ -149,12 +149,12 @@ public class LoginActivity extends AppCompatActivity {
                                     HttpURLConnection conn = null;
                                     LoginOutput output = null;
                                     try {
-                                        URL url = new URL("http://172.31.168.183:3000/");
+                                        URL url = new URL("http://adapter.cs.rutgers.edu:3000/login");
                                         conn = (HttpURLConnection) url.openConnection();
                                         conn.setRequestProperty("Content-Type","application/json; charset=UTF-8");
                                         conn.setRequestProperty("Accept","application/json; charset=UTF-8");
-                                        conn.setRequestProperty("keep-alive","true");
-                                        conn.setConnectTimeout(5000);
+                                        //conn.setRequestProperty("keep-alive","true");
+                                        //conn.setConnectTimeout(5000);
                                         conn.setDoInput(true);
                                         conn.setDoOutput(true);
                                         conn.setRequestMethod("POST");
@@ -213,6 +213,7 @@ public class LoginActivity extends AppCompatActivity {
             );
         } else {
             // error message
+            onLoginFailed();
         }
     }
 
@@ -270,7 +271,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if(pass.isEmpty() || pass.length() < 8 || pass.length() > 12){
-            passwordText.setError("password must be between 5 and 10 alphanumeric characters");
+            passwordText.setError("password must be between 8 and 12 alphanumeric characters");
             isValid = false;
         }
 
