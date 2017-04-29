@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Random;
 
 public class Payment extends AppCompatActivity {
 
@@ -14,6 +17,11 @@ public class Payment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TextView tv = (TextView)findViewById(R.id.paymentText);
+        Random r = new Random();
+        int amount = r.nextInt(100 - 10) + 10;
+        tv.setText("Random Number : " + amount);
         setContentView(R.layout.activity_payment);
 
         button = (Button)findViewById(R.id.payButton);

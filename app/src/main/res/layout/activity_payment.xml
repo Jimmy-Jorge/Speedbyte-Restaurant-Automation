@@ -7,13 +7,12 @@
     tools:context="com.example.vam1994.speedbytedemo.Payment">
 
     <TextView
+            android:id = "@+id/paymentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Total:      $30.00"
         android:textSize="40dp"
         tools:layout_editor_absoluteY="197dp"
         tools:layout_editor_absoluteX="0dp" />
-
 
     <Button
         android:layout_width="wrap_content"

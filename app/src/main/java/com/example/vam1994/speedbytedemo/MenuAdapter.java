@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.NumberPicker;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -32,8 +33,13 @@ public class MenuAdapter extends ArrayAdapter<String>{
 
         RatingBar rb = (RatingBar)customView.findViewById(R.id.setRating);
         TextView tv = (TextView)customView.findViewById(R.id.menuItem);
+        NumberPicker np = (NumberPicker)customView.findViewById(R.id.numberPicker);
 
-        rb.setNumStars(3);
+        np.setMinValue(0);
+        np.setMaxValue(6);
+        np.setWrapSelectorWheel(true);
+
+        rb.setNumStars(5);
 
         tv.setText(time);
 

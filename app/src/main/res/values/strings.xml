@@ -25,6 +25,7 @@
 
 
     <string name="submit_rating">Submit Rating</string>
+    <string name = "place_order">Place Order</string>
 
 
 </resources>

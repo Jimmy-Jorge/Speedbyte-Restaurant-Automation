@@ -100,7 +100,6 @@ public class ManagerInventory extends AppCompatActivity {
         //xAxis.setAvoidFirstLastClipping(true);
         //xAxis.setSpaceMin(20f);
 
-
         YAxis yAxis = chart.getAxisLeft();
         yAxis.setValueFormatter(new LargeValueFormatter());
         yAxis.setDrawGridLines(true);
@@ -108,7 +107,5 @@ public class ManagerInventory extends AppCompatActivity {
         yAxis.setAxisMinimum(0);
         yAxis.setTextColor(Color.WHITE);
         yAxis.setXOffset(2f);
-
-
     }
 }

@@ -87,7 +87,6 @@ public class RatingPage extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 final Dialog dialog = new Dialog(RatingPage.this);
                 dialog.setContentView(R.layout.layout_dialog);
                 dialog.setTitle("Food Item details");
@@ -119,7 +118,5 @@ public class RatingPage extends AppCompatActivity {
         arrayList.add(new FoodItem(0, "Calzone"));
         arrayList.add(new FoodItem(0, "Mac & Cheese"));
         arrayList.add(new FoodItem(0, "Drinks"));
-
     }
-
 }
