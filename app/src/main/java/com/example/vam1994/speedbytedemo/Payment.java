@@ -17,12 +17,12 @@ public class Payment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_payment);
         TextView tv = (TextView)findViewById(R.id.paymentText);
         Random r = new Random();
         int amount = r.nextInt(100 - 10) + 10;
-        tv.setText("Random Number : " + amount);
-        setContentView(R.layout.activity_payment);
+        tv.setText("YOUR TOTAL: $" + amount + ".00");
+
 
         button = (Button)findViewById(R.id.payButton);
         clickButton();

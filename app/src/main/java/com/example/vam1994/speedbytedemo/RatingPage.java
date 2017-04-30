@@ -108,15 +108,12 @@ public class RatingPage extends AppCompatActivity {
      */
     private void setListData() {
         arrayList = new ArrayList<>();
-        arrayList.add(new FoodItem(0, "Veggie Pizza"));
-        arrayList.add(new FoodItem(0, "Pepperoni Pizza"));
-        arrayList.add(new FoodItem(0, "Cheese Pizza"));
-        arrayList.add(new FoodItem(0, "Hamburger"));
+        arrayList.add(new FoodItem(0, "Pizza"));
+        arrayList.add(new FoodItem(0, "Cheeseburger"));
         arrayList.add(new FoodItem(0, "Fries"));
         arrayList.add(new FoodItem(0, "Wings"));
-        arrayList.add(new FoodItem(0, "Breadsticks"));
-        arrayList.add(new FoodItem(0, "Calzone"));
-        arrayList.add(new FoodItem(0, "Mac & Cheese"));
+        arrayList.add(new FoodItem(0, "Meatballs"));
+        arrayList.add(new FoodItem(0, "Ice Cream"));
         arrayList.add(new FoodItem(0, "Drinks"));
     }
 }

@@ -38,7 +38,7 @@ public class Menu extends AppCompatActivity {
         placeOrder = (Button)findViewById(R.id.placeOrderButton);
 
 
-        String[] menuItems = {"Cheese Burger-10 min", "Meatballs-12 min", "Pasta-10 min", "French fries-5 min", "Pasta-15 min", "Buffalo Chicken Wings-12 min", "Ice Cream-3 min"};
+        String[] menuItems = {"Cheese Burger-10 min", "Meatballs-12 min", "Pasta-10 min", "French fries-5 min", "Pizza-15 min", "Buffalo Chicken Wings-12 min", "Ice Cream-3 min", "Cool Drinks-3 min"};
 
         ListAdapter listAdapter = new MenuAdapter(this, menuItems);
 
