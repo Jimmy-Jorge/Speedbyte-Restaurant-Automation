@@ -9,7 +9,7 @@ API  |  Level 23 (minimum)
 Build Tools Version | 25.0.2
 
 ## Preparation
-Here are the necessary steps to run the app in Android Studio. By Demo #2, we will have a .apk file readily available for anyone to download on their phone.
+Here are the necessary steps to run the app in Android Studio. 
 1. Clone Repo into Android Studio
 2. Sync Gradle, if necessary.
 3. Click the play button to run the app.
