@@ -29,5 +29,6 @@ After running the application, you will be prompted to login with a username and
 &ast;*login will only work when a successful connection to the server that exists on adapter.cs.rutgers.edu:3000 is established*
 
 ## Documentation
-* Technical Documentation can be found under Dcoumentation > index.html
-* All other documentation can be found under Documentation
+* Technical Documentation can be found under Technical Dcoumentation > index.html
+* Demo 1 materials and finalized reports can be found under Documentation > &ast;
+* Integration & Unit Testing can be found in respective folders
