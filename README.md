@@ -32,3 +32,4 @@ After running the application, you will be prompted to login with a username and
 * Technical Documentation can be found under Technical Dcoumentation > index.html
 * Demo 1 materials and finalized reports can be found under Documentation > &ast;
 * Integration & Unit Testing can be found in respective folders
+* Any data collected should be in respective folder.
