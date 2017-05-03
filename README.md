@@ -26,7 +26,7 @@ After running the application, you will be prompted to login with a username and
 * Server/Waiter: waiter@mail.com, wait_pass}
 * Customer: {tim@mail.com, tim_pass}
 
-&ast;*login will only work when a successful connection to the server that exists on adapter.cs.rutgers.edu:3000 is established
+&ast;*login will only work when a successful connection to the server that exists on adapter.cs.rutgers.edu:3000 is established*
 
 ## Documentation
 * Technical Documentation can be found under Dcoumentation > index.html
