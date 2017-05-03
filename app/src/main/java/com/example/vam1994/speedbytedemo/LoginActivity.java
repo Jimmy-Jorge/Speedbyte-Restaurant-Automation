@@ -125,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
     }*/
 
     /**
-     * Login.
+     * Initiate Login.
      */
     public void login() {
         if (passwordChecked()) {

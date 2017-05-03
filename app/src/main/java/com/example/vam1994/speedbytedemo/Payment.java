@@ -12,8 +12,15 @@ import java.util.Random;
 
 public class Payment extends AppCompatActivity {
 
+    /**
+     * Payment button
+     */
     static Button button;
 
+    /**
+     * Instantiate Payment View
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +36,9 @@ public class Payment extends AppCompatActivity {
 
     }
 
+    /**
+     * Set click-listener for button
+     */
     public void clickButton(){
         button.setOnClickListener(new View.OnClickListener() {
             @Override
