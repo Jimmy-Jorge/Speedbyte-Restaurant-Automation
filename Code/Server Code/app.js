@@ -18,30 +18,31 @@ var chef = {
 
 var customer = {
 	username:'tim@mail.com',
-	password:'test_pass',
+	password:'tim_pass',
 	keys:{}
 };
 
 var manager = {
 	username:'manager@mail.com',
-	password:'test_pass',
+	password:'man_pass',
 	keys:{}
 };
 
 var waiter = {
 	username:'waiter@mail.com',
-	password:'test_pass',
+	password:'wait_pass',
 	keys:{}
 };
 
 var busboy = {
 	username:'busboy@mail.com',
-	password:'test_pass',
+	password:'bus_pass',
 	keys:{}
 };
 
 
 app.post("/", function(req, res){
+
 	
 	console.log('federer');
     res.status(200).send('Federer is the best');
