@@ -14,11 +14,11 @@ Here are the necessary steps to run the app in Android Studio. By Demo #2, we wi
 2. Sync Gradle, if necessary.
 3. Click the play button to run the app.
 4. Add an emulator to run the app on, if not already available.
-5. Test the app as you wish*.
+5. Test the app as you wish.
 
 ## Usage
 
-After running the application, you will be prompted to enter a username and password:
+After running the application, you will be prompted to login with a username and password*:
 
 * Manager: {manager@mail.com, man_pass}
 * Chef: {chef@mail.com, chef_pass}
@@ -26,7 +26,7 @@ After running the application, you will be prompted to enter a username and pass
 * Server/Waiter: waiter@mail.com, wait_pass}
 * Customer: {tim@mail.com, tim_pass}
 
-Note: login is dependent on successfull connection to the server that exists on adapter.cs.rutgers.edu:3000
+&ast;*login will only work when a successful connection to the server that exists on adapter.cs.rutgers.edu:3000 is established
 
 ## Documentation
 * Technical Documentation can be found under Dcoumentation > index.html
